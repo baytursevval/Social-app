@@ -40,6 +40,39 @@ public class Comment {
 	@Lob //text alanının içeriği büyük nesne olarak işaretlenir
 	@Column(columnDefinition="text") //hibernate'in mysqlde stringi text olarak algılaması için
 	String text;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getText() {
+		return text;
+	}
+
+	public void setText(String text) {
+		this.text = text;
+	}
+
+	public Post getPost() {
+		return post;
+	}
+
+	public void setPost(Post post) {
+		this.post = post;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+	
 	
 
 }
