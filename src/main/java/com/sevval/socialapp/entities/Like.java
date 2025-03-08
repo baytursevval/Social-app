@@ -31,7 +31,7 @@ public class Like {
 	//Long userId;
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="user_id", nullable = false)
-	@OnDelete(action = OnDeleteAction.CASCADE) //user silindiğinde postları da silinsin
+	@OnDelete(action = OnDeleteAction.CASCADE) //user silindiğinde postları da silinsin(yoksa varchar255 olarak alır)
 	@JsonIgnore
 	User user;
 

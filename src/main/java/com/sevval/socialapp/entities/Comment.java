@@ -38,7 +38,7 @@ public class Comment {
 	User user;
 	
 	@Lob //text alanının içeriği büyük nesne olarak işaretlenir
-	@Column(columnDefinition="text") //hibernate'in mysqlde stringi text olarak algılaması için
+	@Column(columnDefinition="text") //hibernate'in mysqlde stringi text olarak algılaması için(yoksa varchar255 olarak alır)
 	String text;
 
 	public Long getId() {

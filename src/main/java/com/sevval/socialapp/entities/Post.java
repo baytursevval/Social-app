@@ -24,15 +24,14 @@ public class Post {
 	Long id;
 	
 	//Long userId;
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name="user_id", nullable = false)
 	@OnDelete(action = OnDeleteAction.CASCADE) //user silindiğinde postları da silinsin
-	@JsonIgnore
 	User user;
 	
 	String title;
 	@Lob //text alanının içeriği büyük nesne olarak işaretlenir
-	@Column(columnDefinition="text") //hibernate'in mysqlde stringi text olarak algılaması için
+	@Column(columnDefinition="text") //hibernate'in mysqlde stringi text olarak algılaması için (yoksa varchar255 olarak alır)
 	String text;
 	public Long getId() {
 		return id;

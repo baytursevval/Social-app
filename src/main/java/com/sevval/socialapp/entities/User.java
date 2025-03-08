@@ -14,11 +14,8 @@ public class User {
 	
 	@Id
 	Long id;
-	
 	String userName;
 	String password;
-	
-	
 	
 	public Long getId() {
 		return id;
